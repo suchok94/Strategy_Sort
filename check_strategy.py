@@ -1,15 +1,16 @@
-from strategies import IStrategy, BubbleSort, QuickSort, InsertSort
+from strategies import BubbleSort, QuickSort, InsertSort
 
-class Checker_strategy:
+
+class CheckerStrategy:
 
     @staticmethod
-    def check(choosen_strategy):
+    def check(choice):
 
-        if choosen_strategy == 1:
+        if choice == 1:
             strategy = BubbleSort
-        elif choosen_strategy == 2:
+        elif choice == 2:
             strategy = QuickSort
-        elif choosen_strategy == 3:
+        elif choice == 3:
             strategy = InsertSort
         else:
             strategy = None
