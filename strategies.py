@@ -3,8 +3,8 @@ from abc import ABC, abstractmethod
 
 class IStrategy(ABC):
 
-    @abstractmethod
     @staticmethod
+    @abstractmethod
     def sort(arr):
         pass
 
@@ -15,7 +15,7 @@ class BubbleSort(IStrategy):
     def sort(arr):
         length = len(arr)
         for i in range(0, length-1, 1):
-            for j in range(i, length - i - 1, 1):
+            for j in range(0, length - i - 1, 1):
                 if arr[j] > arr[j + 1]:
                     arr[j], arr[j+1] = arr[j + 1], arr[j]
 
@@ -23,12 +23,12 @@ class BubbleSort(IStrategy):
 
 class QuickSort(IStrategy):
     @staticmethod
-    def sort(self, arr):
+    def sort(arr):
         pass
 
 
 class InsertSort(IStrategy):
     @staticmethod
-    def sort(self, arr):
+    def sort(arr):
         pass
 
