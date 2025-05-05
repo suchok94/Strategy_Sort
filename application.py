@@ -1,6 +1,6 @@
 from gui import GUI
 from context import Context
-from check_strategy import Checker_strategy
+from check_strategy import CheckerStrategy
 
 class Application:
 
@@ -9,11 +9,15 @@ class Application:
         while loop == True:
 
             GUI.hello()
-            сhoosen_strategy = GUI.get_data()
-            strategy = Checker_strategy.check(сhoosen_strategy)
+            choice = GUI.get_data()
+            strategy = CheckerStrategy.check(choice)
             context = Context()
             context.set_strategy(strategy)
-
-            data = context.execute_strategy([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5])
+            GUI.get_arr()
+            arr_numbers = []
+            insert_arr = GUI.get_data()
+            insert_arr = insert_arr.split(sep=',')
+            arr_numbers.extend(insert_arr)
+            data = context.execute_strategy(arr_numbers)
             GUI.result(data)
             loop = False
