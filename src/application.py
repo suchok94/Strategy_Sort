@@ -1,7 +1,7 @@
-from gui import GUI
-from context import Context
-from check_strategy import CheckerStrategy
-from arrays import Arrays
+from src.gui import GUI
+from src.context import Context
+from src.check_strategy import CheckerStrategy
+from src.arrays import Arrays
 
 class Application:
 
