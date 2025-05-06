@@ -10,7 +10,7 @@ class GUI:
 
     @staticmethod
     def get_data():
-        data = int(input('Введите свой ответ: '))
+        data = input('Введите свой ответ: ')
         return data
 
     @staticmethod
