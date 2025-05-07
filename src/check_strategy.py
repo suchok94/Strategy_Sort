@@ -1,4 +1,4 @@
-from strategies import BubbleSort, QuickSort, InsertSort
+from src.strategies import BubbleSort, QuickSort, InsertSort
 
 
 class CheckerStrategy:

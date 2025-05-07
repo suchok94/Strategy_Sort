@@ -1,4 +1,4 @@
-from strategies import IStrategy
+from src.strategies import IStrategy
 
 
 class Context:
