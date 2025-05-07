@@ -38,7 +38,7 @@ class QuickSort(IStrategy):
                 elif x > pivot:
                     greater.append(x)
 
-            return QuickSort(less) + equal + QuickSort(greater)
+            return QuickSort.sort(less) + equal + QuickSort.sort(greater)
 
         else:
             return arr
@@ -51,7 +51,7 @@ class InsertSort(IStrategy):
         for i in range(0, length - 1, 1):
             imin = i  # index min
             for j in range(i + 1, length, 1):
-                if arr[imin] < arr[j]:
+                if arr[imin] > arr[j]:
                     imin = j
             arr[i], arr[imin] = arr[imin], arr[i]
 
